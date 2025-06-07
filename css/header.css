@@ -1,0 +1,116 @@
+/* --- Estilos para o Header --- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+header .container {
+    max-width: 1200px; /* Largura máxima do conteúdo dentro do cabeçalho */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Espaçamento interno lateral */
+    display: flex; /* Permite alinhar itens na mesma linha */
+    justify-content: space-between; /* Espaça os itens (logo, nav, botão) */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+header .logo {
+    height: 70px; /* Altura do logo */
+    /* Se a imagem tiver fundo branco e você quiser remover, use filter: drop-shadow ou certifique-se que o PNG tenha transparência */
+}
+
+header nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Permite que os itens do menu fiquem na mesma linha */
+}
+
+header nav ul li {
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+}
+
+header nav ul li a {
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor padrão do texto */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 5px 0; /* Espaçamento interno para a área de clique */
+    position: relative; /* Necessário para o efeito de linha embaixo */
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+header nav ul li a:hover {
+    color: #f7c600; /* Altera a cor do texto ao passar o mouse */
+}
+
+/* Efeito de linha embaixo do link ao passar o mouse */
+header nav ul li a::after {
+    content: ''; /* Conteúdo vazio para criar a linha */
+    position: absolute; /* Posicionamento absoluto em relação ao link */
+    bottom: 0; /* Na parte inferior do link */
+    left: 0; /* Começa na esquerda */
+    width: 0%; /* Largura inicial zero */
+    height: 2px; /* Espessura da linha */
+    background-color: #f7c600a2; /* Cor da linha */
+    transition: width 0.3s ease; /* Transição suave na largura */
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after { /* Adicione a classe 'active' ao link da página atual */
+    width: 100%; /* A linha se expande para 100% ao passar o mouse ou se for a página ativa */
+}
+
+/* --- Botão CTA no Header --- */
+
+
+/* --- Responsividade para o Header --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Itens empilhados em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Espaçamento abaixo do logo */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Itens do menu empilhados */
+        margin-top: 10px; /* Espaçamento acima do menu */
+    }
+
+    header nav ul li {
+        margin: 5px 0; /* Espaçamento vertical entre os itens do menu */
+    }
+
+    header nav ul li a {
+        padding: 8px 0; /* Mais padding para facilitar o clique */
+    }
+
+   
+}
+
+@media (max-width: 576px) {
+    header .logo {
+        height: 40px; /* Logo um pouco menor em telas muito pequenas */
+    }
+}
+
+
+#toggle-dark {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #toggle-dark {
+    color: #f7c600;
+}
