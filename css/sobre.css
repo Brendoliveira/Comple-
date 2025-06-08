@@ -55,43 +55,50 @@ body {
     margin-bottom: 1rem;
   }
   
-  /* Lista de cursos */
-  .lista-cursos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .curso {
-    background-color: #fff;
-    padding: 1.5rem;
-    margin: 10px 10px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  /* Rodapé */
+  footer {
     text-align: center;
+    padding: 2rem 1rem;
+    background-color: #eaeaea;
+    margin-top: 2rem;
+    font-size: 0.9rem;
   }
   
-  .curso h3 {
-    margin-bottom: 0.5rem;
+  #sobre {
+    padding: 40px 20px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
-  .curso button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
+  
+  #sobre, #sobre p {
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .curso button:hover {
-    background-color: #333;
+  .logos-sobre {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
   
-
-
-
-
+  
+  .logo-principal {
+    width: 300px;
+  }
+  
+  .logo-reduzida {
+    width: 208px;
+  }
+  
+  /* === DARK MODE === */
+  
+  body.dark-mode #sobre p {
+    color: #ffffff;
+  }
 
 /* Estilos para o botão de dark mode */
 
@@ -99,11 +106,6 @@ body {
 body.dark-mode {
     background-color: #121212;
     color: #f0f0f0;
-}
-
-
-body.dark-mode nav li a:hover {
-    color: #f7c600;
 }
 
 body.dark-mode .hero {
@@ -115,12 +117,14 @@ body.dark-mode .botao {
     color: #000;
 }
 
-body.dark-mode .curso {
-    background-color: #222;
-    color: #fff;
-}
 
-body.dark-mode .curso button {
-    background-color: #f7c600;
-    color: #000;
-}
+body.dark-mode #sobre {
+    color: #ffffff;
+  }
+
+
+  body.dark-mode .logo-principal,
+  body.dark-mode .logo-reduzida {
+    
+    filter: brightness(1.1); /* Opcional para destacar as imagens no dark */
+  }

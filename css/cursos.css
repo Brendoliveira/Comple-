@@ -88,14 +88,6 @@ body {
     background-color: #333;
   }
   
-  /* Rodapé */
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #eaeaea;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-  }
   
 /* Container opcional para centralizar e espaçar */
 .filtro-container {
@@ -164,10 +156,7 @@ body.dark-mode {
     color: #f0f0f0;
 }
 
-body.dark-mode header {
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
-}
+
 
 body.dark-mode nav li a {
     color: #f0f0f0;
@@ -196,7 +185,4 @@ body.dark-mode .curso button {
     color: #000;
 }
 
-body.dark-mode footer {
-    background-color: #1a1a1a;
-    color: #ccc;
-}
+

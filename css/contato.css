@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+  }
+
+.contato {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    color: #222;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .contato-info {
+    margin-bottom: 2rem;
+  }
+  
+  .contato-info ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .contato-info ul li {
+    margin-bottom: 10px;
+  }
+  
+  .contato-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contato-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .contato-form input,
+  .contato-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contato-form button {
+    background-color: #f7c600;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contato-form button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Dark mode para a página de contato */
+  body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+  body.dark-mode .contato {
+    color: #fff;
+  }
+  
+  body.dark-mode .contato-form input,
+  body.dark-mode .contato-form textarea {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  body.dark-mode .contato-form button {
+    background-color: #f7c600;
+    color: #000;
+  }
+  
