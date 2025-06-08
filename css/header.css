@@ -114,3 +114,16 @@ header nav ul li a.active::after { /* Adicione a classe 'active' ao link da pág
 body.dark-mode #toggle-dark {
     color: #f7c600;
 }
+
+.botao-darkmode {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.botao-darkmode:hover {
+    color: #f7c600;
+}

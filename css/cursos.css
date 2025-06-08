@@ -97,8 +97,63 @@ body {
     font-size: 0.9rem;
   }
   
+/* Container opcional para centralizar e espaçar */
+.filtro-container {
+    text-align: center;
+    margin: 30px 0px;
+  }
+  
+  /* Estilização do label */
+  .filtro-container label {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  body:not(.dark-mode) #filtroArea {
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  body:not(.dark-mode) #filtroArea:hover {
+    background-color: #f0f0f0;
+  }
+  
+  body:not(.dark-mode) #filtroArea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
 
 
+  
+  /* Estilização do select */
+  body.dark-mode #filtroArea {
+    background-color: #1c1c1c;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  body.dark-mode #filtroArea:hover {
+    background-color: #2a2a2a;
+  }
+  
+  body.dark-mode #filtroArea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.4);
+  }
+  
 
 
 /* Estilos para o botão de dark mode */
